@@ -3,6 +3,7 @@ from locators import ConstructorPageLocators
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+
 class TestConstructor:
     def test_navigate_to_buns_section(self, main_driver):
         main_driver.find_element(*ConstructorPageLocators.SAUCES_SECTION).click()
@@ -14,7 +15,6 @@ class TestConstructor:
 
         assert 'Булки' in current_section.text
 
-
     def test_navigate_to_sauces_section(self, main_driver):
         main_driver.find_element(*ConstructorPageLocators.SAUCES_SECTION).click()
         current_section = WebDriverWait(main_driver, 10).until(
@@ -22,7 +22,6 @@ class TestConstructor:
         )
 
         assert 'Соусы' in current_section.text
-
 
     def test_navigate_to_fillings_section(self, main_driver):
         main_driver.find_element(*ConstructorPageLocators.FILLINGS_SECTION).click()

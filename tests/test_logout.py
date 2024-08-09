@@ -1,8 +1,9 @@
 import pytest
 from locators import MainPageLocators, CabinetPageLocators
-from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from data import Data
+
 
 @pytest.mark.usefixtures("register_user", "login_user")
 class TestLogout:
@@ -18,6 +19,6 @@ class TestLogout:
         logout_button.click()
 
         WebDriverWait(driver, 10).until(
-            EC.url_to_be("https://stellarburgers.nomoreparties.site/login")
+            EC.url_to_be(Data.STELLAR_LOGOUT_URL)
         )
-        assert driver.current_url == "https://stellarburgers.nomoreparties.site/login"
+        assert driver.current_url == Data.STELLAR_LOGOUT_URL

@@ -3,13 +3,13 @@ from locators import MainPageLocators, LoginLocators, RegistrationLocators, Cons
 from data import Data
 from conftest import register_user, login_user
 
+
 @pytest.mark.usefixtures("register_user", "login_user")
 class TestNavigation:
     def test_navigate_to_personal_cabinet(self, driver):
         profile_button = driver.find_element(*MainPageLocators.PERSONAL_CABINET_BUTTON)
         profile_button.click()
         assert driver.current_url == "https://stellarburgers.nomoreparties.site/account"
-
 
     def test_navigate_to_constructor_from_personal_cabinet(self, driver):
         driver.find_element(*MainPageLocators.PERSONAL_CABINET_BUTTON).click()

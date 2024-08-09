@@ -15,6 +15,7 @@ class LoginLocators:
     RESTORE_PASSWORD = (By.XPATH, "//a[text()= 'Восстановить пароль']") #Переход на окно Восстановления пароля
     EMAIL_RESTORE_FIELD = (By.XPATH, "//label[text()= 'Email']") #Поле ввода Имэйла в окне восстановления пароля
     RESTORE_BUTTON = (By.XPATH, "//button[text()= 'Восстановить']") #Кнопка Восстановить
+    ORDER_BUTTON = (By.XPATH, "//button[text()='Оформить заказ']") #Кнопка Оформить заказ на главной старнице после входа
 
 class MainPageLocators:
     MAIN_LOGIN_BUTTON = (By.XPATH, "//button[text()='Войти в аккаунт']") #Кнопка Войти в аккаунт на главной странице сайта
