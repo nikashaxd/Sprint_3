@@ -13,7 +13,7 @@ class TestConstructor:
             EC.presence_of_element_located(ConstructorPageLocators.CURRENT_SECTION)
         )
 
-        assert 'Булки' in current_section.text
+        assert 'tab_tab_type_current__2BEPc' in current_section.get_attribute('class')
 
     def test_navigate_to_sauces_section(self, main_driver):
         main_driver.find_element(*ConstructorPageLocators.SAUCES_SECTION).click()
@@ -21,7 +21,7 @@ class TestConstructor:
             EC.presence_of_element_located(ConstructorPageLocators.CURRENT_SECTION)
         )
 
-        assert 'Соусы' in current_section.text
+        assert 'tab_tab_type_current__2BEPc' in current_section.get_attribute('class')
 
     def test_navigate_to_fillings_section(self, main_driver):
         main_driver.find_element(*ConstructorPageLocators.FILLINGS_SECTION).click()
@@ -29,4 +29,4 @@ class TestConstructor:
             EC.presence_of_element_located(ConstructorPageLocators.CURRENT_SECTION)
         )
 
-        assert 'Начинки' in current_section.text
+        assert 'tab_tab_type_current__2BEPc' in current_section.get_attribute('class')
