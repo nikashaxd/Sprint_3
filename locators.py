@@ -35,8 +35,8 @@ class CabinetPageLocators:
 
 
 class ConstructorPageLocators:
-    BUNS_SECTION = (By.XPATH, "//span[text()='Булки']")  #Раздел с Булками
-    SAUCES_SECTION = (By.XPATH, "//span[text()='Соусы']")  #Раздел с Соусами
-    FILLINGS_SECTION = (By.XPATH, "//span[text()='Начинки']")  #Раздел с Начинками
+    BUNS_SECTION = (By.XPATH, "//div[contains(@class, 'tab_tab__1SPyG') and .//span[text()='Булки']]")  #Раздел с Булками
+    SAUCES_SECTION = (By.XPATH, "//div[contains(@class, 'tab_tab__1SPyG') and .//span[text()='Соусы']]")  #Раздел с Соусами
+    FILLINGS_SECTION = (By.XPATH, "//div[contains(@class, 'tab_tab__1SPyG') and .//span[text()='Начинки']]")  #Раздел с Начинками
     CURRENT_SECTION = (
         By.XPATH, "//div[contains(@class, 'current')]")  #Класс, показывающий какой элемент выбран на странице
